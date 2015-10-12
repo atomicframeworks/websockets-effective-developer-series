@@ -1,0 +1,51 @@
+.caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.reveal h4 {
+  text-transform: inherit;
+}
+
+
+/*
+  Monospaced quote on white background
+*/
+
+.reveal blockquote.monospaced {
+  text-align: left;
+  font-style: inherit;
+  font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  font-size: 16px;
+  font-size: 75%;
+  padding: 15px 0 15px 25px;
+}
+
+.highlight { 
+  background-color: #FFE100;
+}
+
+
+.reveal .classic-http,
+.reveal .ajax-polling,
+.reveal .long-polling {
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 70%;
+}
+
+
+.reveal .cursive {
+  font-family: "Brush Script MT",cursive;
+  text-transform: inherit;
+  font-weight: 100;
+}
+
+.hljs.http {
+  text-align: left;
+  font-size: 32px;
+}
+  

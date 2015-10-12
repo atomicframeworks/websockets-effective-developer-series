@@ -1,0 +1,1 @@
+In order to run the example navigate to the folder in Terminal.  Run "npm install" and then "node server".
