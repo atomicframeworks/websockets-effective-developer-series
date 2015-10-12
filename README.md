@@ -2,7 +2,7 @@
 
 A presentation on WebSockets.
 
-Run the presentation by running the commands :
+View the presentation locally by running the commands:
 
     git clone https://github.com/atomicframeworks/websockets-effective-developer-series.git
     
