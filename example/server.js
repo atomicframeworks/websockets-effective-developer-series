@@ -13,10 +13,10 @@ io.on('connection', function (socket) {
     console.log('user disconnected');
   });
   
-  // When the server receives a chat message emit it to everyone
-  socket.on('chat message', function (msg) {
+  // When the server receives a chat message emit it back to all sockets
+  socket.on('chat message from client', function (msg) {
     console.log('server got a message');
-    io.emit('chat message', msg);
+    io.emit('chat message from server', msg);
   });
   
 });

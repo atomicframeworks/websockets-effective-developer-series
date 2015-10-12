@@ -16,7 +16,7 @@
   <body>
     <ul id="messages"></ul>
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="input" autocomplete="off" /><button>Send</button>
     </form>
     
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -24,18 +24,30 @@
     <script>
       
       // Start the WebSocket connection
+      // Abstraction for the native API:
+      // var socket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
       var socket = io();
       
       // Add listener for chat message
-      socket.on('chat message', function(msg){
+      // Native:
+      // socket.onmessage = function () { 
+      //     // Conditionally call code based on event message
+      // };
+      socket.on('chat message from server', function(msg){
         $('#messages').append($('<li>').text(msg));
       });
       
       
       // Bind form submit to emit messages to WebSocket
-      $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
+      $('form').submit(function () {
+        
+        // Native:
+        // Send the msg object as a JSON-formatted string.
+        // exampleSocket.send(JSON.stringify(msg));
+        socket.emit('chat message from client', $('#input').val());
+        
+        // Clear out the input element
+        $('#input').val('');
         return false;
       });
     </script>
